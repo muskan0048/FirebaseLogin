@@ -1,0 +1,494 @@
+<html>
+    <head>
+        <title>
+            Krosswork Login | Signup
+        </title>
+        <style>
+        
+        @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Oswald|Roboto);
+body {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  background-image: url("http://www.krosswork.com/images/full-width-images/m1.jpg");
+  background-size:100%;
+  background-repeat:no-repeat;
+  overflow: hidden;
+}
+
+.table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.container {
+  position: relative;
+  width: 600px;
+  margin: 30px auto 0;
+  height: 320px;
+  background-color: rgba(0,0,0,0.3);
+  top: 25%;
+  margin-top: -160px;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.container .box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.container .box:before, .container .box:after {
+  content: " ";
+  position: absolute;
+  left: 152px;
+  top: 50px;
+  background-color: rgba(0,0,0,0.8); ;
+  transform: rotateX(52deg) rotateY(15deg) rotateZ(-38deg);
+  width: 300px;
+  height: 285px;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.container .box:after {
+  background-color: rgba(0,0,0,0.3);
+  top: -10px;
+  left: 80px;
+  width: 320px;
+  height: 180px;
+}
+.container .container-forms {
+  position: relative;
+}
+.container .btn {
+  cursor: pointer;
+  text-align: center;
+  margin: 0 auto;
+  width: 60px;
+  color: #fff;
+  background-color: #00bfff;
+  opacity: 1;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.container .btn:hover {
+  opacity: 0.7;
+}
+.container .btn, .container input {
+  padding: 10px 15px;
+}
+.container input {
+  margin: 0 auto 15px;
+  display: block;
+  width: 220px;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.container .container-forms .container-info {
+  text-align: left;
+  font-size: 0;
+}
+.container .container-forms .container-info .info-item {
+  text-align: center;
+  font-size: 16px;
+  width: 300px;
+  height: 320px;
+  display: inline-block;
+  vertical-align: top;
+  color: #fff;
+  opacity: 1;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.container .container-forms .container-info .info-item p {
+  font-size: 20px;
+  margin: 20px;
+}
+.container .container-forms .container-info .info-item .btn {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+.container .container-forms .container-info .info-item .table-cell {
+  padding-right: 35px;
+}
+.container .container-forms .container-info .info-item:nth-child(2) .table-cell {
+  padding-left: 35px;
+  padding-right: 0;
+}
+.container .container-form {
+  overflow: hidden;
+  position: absolute;
+  left: 30px;
+  top: -30px;
+  width: 305px;
+  height: 380px;
+  background-color: #fff;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.container .container-form:before {
+  content: "✔";
+  position: absolute;
+  left: 160px;
+  top: -50px;
+  color: #5356ad;
+  font-size: 130px;
+  opacity: 0;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.container .container-form .btn {
+  position: relative;
+  box-shadow: 0 0 10px 1px #00bfff;
+  margin-top: 30px;
+}
+.container .form-item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.container .form-item.sign-up {
+  position: absolute;
+  left: -100%;
+  opacity: 0;
+}
+.container.log-in .box:before {
+  position: absolute;
+  left: 180px;
+  top: 62px;
+  height: 265px;
+}
+.container.log-in .box:after {
+  top: 22px;
+  left: 192px;
+  width: 324px;
+  height: 220px;
+}
+.container.log-in .container-form {
+  left: 265px;
+}
+.container.log-in .container-form .form-item.sign-up {
+  left: 0;
+  opacity: 1;
+}
+.container.log-in .container-form .form-item.log-in {
+  left: -100%;
+  opacity: 0;
+}
+.container.active {
+  width: 260px;
+  height: 140px;
+  margin-top: -70px;
+}
+.container.active .container-form {
+  left: 30px;
+  width: 200px;
+  height: 200px;
+}
+.container.active .container-form:before {
+  content: "✔";
+  position: absolute;
+  left: 51px;
+  top: 5px;
+  color: #5356ad;
+  font-size: 130px;
+  opacity: 1;
+}
+.container.active input, .container.active .btn, .container.active .info-item {
+  display: none;
+  opacity: 0;
+  padding: 0px;
+  margin: 0 auto;
+  height: 0;
+}
+.container.active .form-item {
+  height: 100%;
+}
+.container.active .container-forms .container-info .info-item {
+  height: 0%;
+  opacity: 0;
+}
+
+.rabbit {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3;
+  fill: #fff;
+}
+
+ul {
+  list-style-type: none;
+  padding: 30px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0);
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  width:100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+li a:hover {
+  color: #fffff0;
+}
+
+.active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+</style>
+         
+        </head>
+    <body>
+   <ul>
+  <li style=" margin-left: 45%;"><a href="http://www.krosswork.com/"><img src="http://www.krosswork.com/images/logo.png" style="height:100px;  "></a></li>
+</ul>
+<div id="myDIV" class="container">
+  <div class="box"></div>
+  <div class="container-forms">
+    <div class="container-info">
+      <div class="info-item">
+        <div class="table">
+          <div class="table-cell">
+            <p>
+              Have an account?
+            </p>
+            <div class="btn">
+              Log in
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="table">
+          <div class="table-cell">
+            <p>
+              Don't have an account? 
+            </p>
+            <div class="btn">
+              Sign up
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-form">
+      <div class="form-item log-in">
+        <div class="table">
+          <div class="table-cell">
+            <input id="email" name="Username" placeholder="Username" type="text" />
+            <input id="password" name="Password" placeholder="Password" type="Password" />
+            <div onclick="login();" class="btn">
+              Log in
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-item sign-up">
+        <div class="table">
+          <div class="table-cell">
+            <input name="email" id="email1" placeholder="Email" type="text" />
+            <input name="fullName" id="name" placeholder="Full Name" type="text" />
+            <input name="Phone" id="phone" placeholder="Phone No" type="text" />
+            <input name="Password" id="password1" placeholder="Password" type="Password" />
+            <div onclick="register();" class="btn">
+              Sign up
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
+
+<!-- Add additional services that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-functions.js"></script><script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCHrxgbIIKijVuT9yWOvlYk22g7JineK2A",
+    authDomain: "splash-7567.firebaseapp.com",
+    databaseURL: "https://splash-7567.firebaseio.com",
+    projectId: "splash-7567",
+    storageBucket: "splash-7567.appspot.com",
+    messagingSenderId: "491962343681"
+  };
+  firebase.initializeApp(config);
+  var db = firebase.firestore();
+const settings = {/* your settings... */ timestampsInSnapshots: true};
+db.settings(settings);
+
+function login(){
+     var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        if (email.length < 4) {
+          alert('Please enter an email address.');
+          return;
+        }
+        if (password.length < 4) {
+          alert('Please enter a password.');
+          return;
+        }
+       
+        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          if (errorCode === 'auth/wrong-password') {
+            document.getElementById("myDIV").style.display = "none";
+            alert('Wrong password.');
+            window.location.reload();
+          } else {
+            document.getElementById("myDIV").style.display = "none";
+            alert(errorMessage);
+            window.location.reload();
+          }
+          console.log(error);
+         
+        });
+firebase.auth().onAuthStateChanged(function(user) {
+        document.getElementById("myDIV").style.display = "none";
+        if (user) {
+         alert("Login Successful");
+         var uid = user.uid;
+         console.log(user.name);
+         console.log(uid);
+         sessionStorage.id=uid;
+         console.log(sessionStorage.id);
+         window.location.replace("../index.html");
+        }
+        
+      });
+    }
+function register(){
+    document.getElementById("myDIV").style.display = "none";
+    var email = document.getElementById('email1').value;
+      var password = document.getElementById('password1').value;
+      if (email.length < 4) {
+        alert('Please enter an email address.');
+        return;
+      }
+      if (password.length < 4) {
+        alert('Please enter a password.');
+        return;
+      }
+      // Sign in with email and pass.
+      // [START createwithemail]
+      firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // [START_EXCLUDE]
+        if (errorCode == 'auth/weak-password') {
+          alert('The password is too weak.');
+        } else {
+          alert(errorMessage);
+        }
+        console.log(error);
+        // [END_EXCLUDE]
+      });
+      firebase.auth().onAuthStateChanged(function(user) {
+        document.getElementById("myDIV").style.display = "none";
+        if (user) {
+    alert("Registered User");
+         var uid = user.uid;
+             db.collection("Users")
+    .doc(uid)
+    .set({
+        email: document.getElementById('email1').value,
+        password: document.getElementById('password1').value,
+        name: document.getElementById('name').value,
+        phoneNo: document.getElementById('phone').value
+        
+    })
+    .then(function(docRef) {
+      // add document Parlour
+        console.log("WorkSpace Added");
+       // window.alert("User Added");
+      //  window.location.replace("../myhtml/index.html");
+    })
+    .catch(function(error) {
+      // catch of Parlour
+        console.error("Error Adding WorkSpace: ", error);
+        window.alert("User Not Added");
+        window.location.reload();
+    });
+         console.log(uid);
+         sessionStorage.id=uid;
+         console.log(sessionStorage.id);
+         window.location.replace("http://krosswork.com");
+        }
+        
+      });
+
+}
+   $(".info-item .btn").click(function(){
+  $(".container").toggleClass("log-in");
+});
+$(".container-form .btn").click(function(){
+  $(".container").addClass("active");
+});
+  </script>
+    </body>
+</html>
